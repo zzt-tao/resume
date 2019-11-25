@@ -314,22 +314,22 @@
 		color:#2c3e50;
 	}
 
-.works{
-	height:360px;
-}
-.works .wdzp{
-	width:50%;
-	height:165px;
-	min-width: 160px;
-}
-.works .wdzp .zuopin{
-	width:155px;
-	height:155px;
-}
-.works .zuopin_txt{
-	opacity: 1;
-}
-.works .zuopin_txt .zuopin_js{
-	margin-top:60px;
-}
+	.works{
+		height:360px;
+	}
+	.works .wdzp{
+		width:50%;
+		height:150px;
+		min-width: 140px;
+	}
+	.works .wdzp .zuopin{
+		width:135px;
+		height:135px;
+	}
+	.works .zuopin_txt{
+		opacity: 1;
+	}
+	.works .zuopin_txt .zuopin_js{
+		margin-top:60px;
+	}
 }
