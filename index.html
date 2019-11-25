@@ -283,6 +283,7 @@
 			return height + doc.offsetHeight;
 		}
 		document.body.onscroll=function(){
+			alert(doc.scrollTop+"==="+doc.offsetHeight);
 			if(doc.scrollTop >= doc.offsetHeight){
 				head.style.cssText="position:fixed;top:0;";
 			}else{
