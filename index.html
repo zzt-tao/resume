@@ -282,50 +282,31 @@
 			}
 			return height + doc.offsetHeight;
 		}
-		document.body.onscroll=function(){
-			alert(doc.scrollTop+"==="+doc.offsetHeight);
-			if(doc.scrollTop >= doc.offsetHeight){
-				head.style.cssText="position:fixed;top:0;";
-			}else{
-				head.style.cssText="";
-			}
-			var modular=document.getElementsByClassName("modular");
-			if(doc.scrollTop >= doc.offsetHeight){
-				modular[0].className="modular active";
-			}
-			if(doc.scrollTop >= modular_height(modular,1)){
-				modular[1].className="modular active";
-			}
-			if(doc.scrollTop >=  modular_height(modular,2)){
-				modular[2].className="modular active";
-			}
-			if(doc.scrollTop >=  modular_height(modular,3)){
-				modular[3].className="modular active";
-			}
-			if(doc.scrollTop >=  modular_height(modular,4)){
-				modular[4].className="modular active";
-			}
+		function body_top(){
+			return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 		}
-		document.body.ontouchmove=function(){
-			if(doc.scrollTop >= doc.offsetHeight){
+		//原因是doc.scrollTop为0
+		document.body.onscroll=function(){
+			// alert(doc.scrollTop+"==="+doc.offsetHeight);
+			if(body_top() >= doc.offsetHeight){
 				head.style.cssText="position:fixed;top:0;";
 			}else{
 				head.style.cssText="";
 			}
 			var modular=document.getElementsByClassName("modular");
-			if(doc.scrollTop >= doc.offsetHeight){
+			if(body_top() >= doc.offsetHeight){
 				modular[0].className="modular active";
 			}
-			if(doc.scrollTop >= modular_height(modular,1)){
+			if(body_top() >= modular_height(modular,1)){
 				modular[1].className="modular active";
 			}
-			if(doc.scrollTop >=  modular_height(modular,2)){
+			if(body_top() >=  modular_height(modular,2)){
 				modular[2].className="modular active";
 			}
-			if(doc.scrollTop >=  modular_height(modular,3)){
+			if(body_top() >=  modular_height(modular,3)){
 				modular[3].className="modular active";
 			}
-			if(doc.scrollTop >=  modular_height(modular,4)){
+			if(body_top() >=  modular_height(modular,4)){
 				modular[4].className="modular active";
 			}
 		}
