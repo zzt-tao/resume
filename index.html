@@ -319,10 +319,10 @@
 		  		bushu = weizhi<b?Math.ceil(bushu)+2:-Math.ceil(bushu)-2;
 		  		weizhi +=bushu;
 		  		if(Math.abs(weizhi-b)>Math.abs(bushu)){
-		  			document.documentElement.scrollTop=weizhi;
+		  			yuansu.scrollTop=weizhi;
 		  			requestAnimationFrame(yuansu.time);
 		  		}else{
-		  			body_top()=b;
+		  			yuansu.scrollTop=b;
 		  		}
 		  	};
 		  	requestAnimationFrame(yuansu.time);
@@ -335,8 +335,9 @@
 				var modular = document.getElementsByClassName("modular")[this.ranking];
 				modular.className="modular active";
 				var gao = modular.offsetTop+doc.offsetHeight-72;
+				var zhuti = document.documentElement.scrollTop==0?document.body:document.documentElement;
 				console.log(gao);
-				yidong(document.documentElement,gao);
+				yidong(zhuti,gao);
 			};
 		}
 		document.getElementsByClassName("anniu")[0].onclick = function(){li[0].click()}
