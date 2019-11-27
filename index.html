@@ -287,7 +287,6 @@
 		}
 		//原因是doc.scrollTop为0
 		document.body.onscroll=function(){
-			// alert(doc.scrollTop+"==="+doc.offsetHeight);
 			if(body_top() >= doc.offsetHeight){
 				head.style.cssText="position:fixed;top:0;";
 			}else{
@@ -323,7 +322,7 @@
 		  			document.documentElement.scrollTop=weizhi;
 		  			requestAnimationFrame(yuansu.time);
 		  		}else{
-		  			document.documentElement.scrollTop=b;
+		  			body_top()=b;
 		  		}
 		  	};
 		  	requestAnimationFrame(yuansu.time);
