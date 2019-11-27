@@ -153,6 +153,7 @@
 	margin:0 auto;
 	position: relative;
 	overflow: hidden;
+	z-index: 100;
 }
 .jishu .master .master_txt{
 	margin-top:30px;
@@ -292,11 +293,11 @@
 		margin:10px 0;
 	}
 	.jingli .left:after,.jingli .right:after{
-		left:-10%;
-		width:10%;
+		left:calc(-20% + 25px);
+		width:calc(20% - 25px);
 	}
 	.jingli .left:before,.jingli .right:before{
-		left:calc(-10% - 8px);
+		left:calc(-20% + 23px);
 
 	}
 	
