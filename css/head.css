@@ -94,12 +94,13 @@ header .leibiao li:hover{
 	header .leibiao{
 		width:50px;
 		height:42px;
-		border:1px solid #fff;
+		border:1px solid #e6e6e6;
 		border-radius:5px;
 		overflow: hidden;
 		margin:15px 6% 15px 0;
-		background:url("../img/bg1.jpg") no-repeat center;
+		background:url("../img/caidan.png") no-repeat center;
 		background-size: 80% 80%;
+		background-position-y: 80%;
 	}
 	header .leibiao ul{
 		position: absolute;

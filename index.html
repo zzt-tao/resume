@@ -41,6 +41,19 @@
 			opacity:0;
 			animation: bottom_top 0.8s forwards;
 		}
+		
+		.lianxi{
+			width: 80%;
+			margin:0 auto 15px auto;
+			text-align: left;
+			font-size:14px;
+			color:#666666;
+		}
+		.lianxi>span{
+			font-size:16px;
+			font-weight: 900;
+			color:#2C3E50;
+		}
 	</style>
 </head>
 <body>
@@ -124,7 +137,7 @@
 			<div class="modular_head">我的经历</div><hr>
 			<div class="jingli">
 				<div class="neirong donghua" style="transition-delay:0.5s;">
-					<div class="left" style="">
+					<div class="left">
 						<!-- <div> -->
 							<span style="color:#999;margin-bottom:10px;display: inline-block;">2017.09 - 2019.06</span> <br>
 							加入学校的网络中心部门，学习处理电脑网络故障。
@@ -256,9 +269,12 @@
 
 		<div class="modular"  style="background-color: #eee;">
 			<div class="modular_head">联系方式</div>
-			
+			<hr>
+			<div class="donghua lianxi">我的电话：<span>13643072327</span> </div>
+			<div class="donghua lianxi" style="transition-delay:0.4s;">我的邮箱：<span>2589073052@qq.com</span> </div>
 		</div>
-
+		
+		<div style="font-size:14px;color:#666;padding:10px 0;">© Tao | 张梓涛的简历</div>
 </body>
 <script>
 	
@@ -308,6 +324,9 @@
 			if(body_top() >=  modular_height(modular,4)){
 				modular[4].className="modular active";
 			}
+			if(body_top() >=  modular_height(modular,4)+modular[5].offsetHeight){
+				modular[5].className="modular active";
+			}
 		}
 		
 		function yidong(yuansu,b){
@@ -334,9 +353,8 @@
 				e.stopPropagation();
 				var modular = document.getElementsByClassName("modular")[this.ranking];
 				modular.className="modular active";
-				var gao = modular.offsetTop+doc.offsetHeight-72;
+				var gao =this.ranking>4?modular.offsetTop+modular.offsetHeight:modular.offsetTop+doc.offsetHeight-72;
 				var zhuti = document.documentElement.scrollTop==0?document.body:document.documentElement;
-				console.log(gao);
 				yidong(zhuti,gao);
 			};
 		}
