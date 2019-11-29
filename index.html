@@ -358,8 +358,14 @@
 				yidong(zhuti,gao);
 			};
 		}
-		document.getElementsByClassName("anniu")[0].onclick = function(){li[0].click()}
-		document.getElementsByClassName("anniu")[1].onclick = function(){li[4].click()}
+		document.getElementsByClassName("anniu")[0].onclick = function(){
+			document.documentElement.scrollTop=1;
+			li[0].click();
+		}
+		document.getElementsByClassName("anniu")[1].onclick = function(){
+			document.documentElement.scrollTop=1;
+			li[4].click()
+		}
 
 		document.getElementsByClassName("leibiao")[0].onclick=function(){
 			var ul = this.children[0];
